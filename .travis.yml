@@ -1,3 +1,4 @@
 language: C
+sudo: required
 script: ./tests/script/prepare_for_test
 script: ./tests/script/exec_all_unit

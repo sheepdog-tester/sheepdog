@@ -1,5 +1,7 @@
 language: C
 sudo: true
 script:
+  - sudo apt-get update
+  - sudo apt-get upgrade
   - ./tests/script/prepare_for_test
   - ./tests/script/exec_all_unit

@@ -1,7 +1,6 @@
 language: C
 sudo: required
 dist: trusty
-sudo: true
 script:
   - cat /etc/lsb-release
   - ./tests/script/prepare_for_test

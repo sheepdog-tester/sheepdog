@@ -6,8 +6,9 @@ USR_PATH=/usr
 VAR_PATH=/var
 
 prepare() {
+  sudo apt-get update
   sudo apt-get --quiet -y install \
-    git pkg-config make autoconf libtool yasm liburcu-dev libzookeeper-mt-dev qemu check python zookeeper xfsprogs bc
+    git pkg-config make autoconf libtool yasm liburcu-dev libzookeeper-mt-dev qemu check python zookeeper xfsprogs bc gcc g++
 }
 
 build_sheepdog() {

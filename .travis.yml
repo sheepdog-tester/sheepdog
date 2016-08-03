@@ -2,7 +2,5 @@ language: C
 sudo: true
 script:
   - cat /etc/lsb-release
-  - sudo apt-get update
-  - sudo apt-get install -y gcc
   - ./tests/script/prepare_for_test
   - ./tests/script/exec_all_unit

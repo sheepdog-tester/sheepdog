@@ -1,4 +1,5 @@
 language: C
 sudo: true
-script: ./tests/script/prepare_for_test
-script: ./tests/script/exec_all_unit
+script:
+  - ./tests/script/prepare_for_test
+  - ./tests/script/exec_all_unit

@@ -12,6 +12,7 @@ prepare() {
 }
 
 build_sheepdog() {
+  make clean
   ./autogen.sh
   ./configure --prefix=$USR_PATH --localstatedir=$VAR_PATH --enable-zookeeper --disable-corosync --enable-unittest
   make

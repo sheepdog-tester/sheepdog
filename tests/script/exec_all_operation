@@ -21,4 +21,6 @@ tear_down() {
 }
 
 #main
+set_up
 exec_operation
+tear_down

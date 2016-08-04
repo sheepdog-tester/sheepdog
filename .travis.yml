@@ -4,6 +4,12 @@ script:
   - cat /etc/lsb-release
   - ./tests/script/prepare_for_test
   - wget http://security.ubuntu.com/ubuntu/pool/universe/q/qemu/qemu_2.5+dfsg-5ubuntu10.1_amd64.deb
+  - wget http://security.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system_2.5+dfsg-5ubuntu10.1_amd64.deb
+  - wget http://security.ubuntu.com/ubuntu/pool/universe/q/qemu/qemu-user_2.5+dfsg-5ubuntu10.1_amd64.deb
+  - wget http://security.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-utils_2.5+dfsg-5ubuntu10.1_amd64.deb
+  - sudo dpkg -i --force-depends qemu-system_2.5+dfsg-5ubuntu10.1_amd64.deb
+  - sudo dpkg -i --force-depends qemu-user_2.5+dfsg-5ubuntu10.1_amd64.deb
+  - sudo dpkg -i --force-depends qemu-utils_2.5+dfsg-5ubuntu10.1_amd64.deb
   - sudo dpkg -i --force-depends qemu_2.5+dfsg-5ubuntu10.1_amd64.deb
   - qemu-io -V
   - ./tests/script/exec_all_unit

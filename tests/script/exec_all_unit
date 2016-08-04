@@ -5,21 +5,29 @@ export LANG=C LC_ALL=C
 USR_PATH=/usr
 VAR_PATH=/var
 
-get_submodule() {
+set_up() {
+  make clean
+
   rm -rf ./tests/unit/unity
-  rm -rf ./tests/unit/cmock
   git submodule update --init ./tests/unit/unity
+
+  rm -rf ./tests/unit/cmock
   git submodule update --init ./tests/unit/cmock
+
+  sudo /usr/share/zookeeper/bin/zkServer.sh restart
 }
 
 exec_unit() {
-  sudo /usr/share/zookeeper/bin/zkServer.sh restart
   ./autogen.sh
   ./configure --prefix=$USR_PATH --localstatedir=$VAR_PATH --enable-zookeeper --disable-corosync --enable-unittest
   make check
+}
+
+tear_down() {
   make clean
 }
 
 #main
-get_submodule
+set_up
 exec_unit
+tear_down

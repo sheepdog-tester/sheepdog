@@ -2,6 +2,8 @@ language: C
 sudo: required
 dist: trusty
 script:
+  - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib
+  - export LD_LIBRARY_PATH
   - ./tests/script/prepare_for_test
   - ./tests/script/exec_all_unit
   - ./tests/script/exec_all_operation

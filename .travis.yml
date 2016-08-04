@@ -1,5 +1,6 @@
 sudo: required
-dist: trusty
+#dist: trusty
+dist: xenial
 script:
   - cat /etc/lsb-release
   - ./tests/script/prepare_for_test

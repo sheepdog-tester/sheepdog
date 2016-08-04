@@ -7,6 +7,12 @@ script:
   - wget http://security.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-system_2.5+dfsg-5ubuntu10.1_amd64.deb
   - wget http://security.ubuntu.com/ubuntu/pool/universe/q/qemu/qemu-user_2.5+dfsg-5ubuntu10.1_amd64.deb
   - wget http://security.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-utils_2.5+dfsg-5ubuntu10.1_amd64.deb
+  - wget http://security.ubuntu.com/ubuntu/pool/main/q/qemu/qemu-block-extra_2.5+dfsg-5ubuntu10.1_amd64.deb
+  - wget http://mirrors.kernel.org/ubuntu/pool/main/g/gnutls28/libgnutls30_3.4.10-4ubuntu1_amd64.deb
+  - wget http://mirrors.kernel.org/ubuntu/pool/main/n/nettle/libnettle6_3.2-1_amd64.deb
+  - sudo dpkg -i --force-depends libnettle6_3.2-1_amd64.deb
+  - sudo dpkg -i --force-depends libgnutls30_3.4.10-4ubuntu1_amd64.deb
+  - sudo dpkg -i --force-depends qemu-block-extra_2.5+dfsg-5ubuntu10.1_amd64.deb
   - sudo dpkg -i --force-depends qemu-system_2.5+dfsg-5ubuntu10.1_amd64.deb
   - sudo dpkg -i --force-depends qemu-user_2.5+dfsg-5ubuntu10.1_amd64.deb
   - sudo dpkg -i --force-depends qemu-utils_2.5+dfsg-5ubuntu10.1_amd64.deb

@@ -1,5 +1,7 @@
 sudo: required
 dist: trusty
+addons:
+  qemu: "2.5.0"
 script:
   - cat /etc/lsb-release
   - ./tests/script/prepare_for_test

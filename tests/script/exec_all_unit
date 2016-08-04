@@ -6,8 +6,6 @@ USR_PATH=/usr
 VAR_PATH=/var
 
 set_up() {
-  make clean
-
   rm -rf ./tests/unit/unity
   git submodule update --init ./tests/unit/unity
 

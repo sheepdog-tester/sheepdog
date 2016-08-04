@@ -5,8 +5,24 @@ export LANG=C LC_ALL=C
 prepare() {
   sudo apt-get update
   sudo apt-get --quiet -y install \
-    git pkg-config make autoconf libtool yasm liburcu-dev libzookeeper-mt-dev qemu check python zookeeper xfsprogs bc gcc g++
+    git pkg-config make autoconf libtool yasm liburcu-dev libzookeeper-mt-dev check python zookeeper xfsprogs bc gcc g++
+}
+
+build_qemu() {
+  sudo apt-get --quiet -y install zlib1g-dev libglib2.0-dev libpixman-1-dev
+  cd /tmp
+  if [ ! -d qemu ] ; then
+    git clone "${QEMU_GITREPO:-git://git.qemu-project.org/qemu.git}"
+  fi
+  cd qemu
+  git checkout "${QEMU_GITBRANCH:-master}"
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    --target-list=x86_64-softmmu
+  make
+  sudo make install
+  cd ~
 }
 
 #main
 prepare
+bulid_qemu

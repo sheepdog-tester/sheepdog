@@ -2,6 +2,7 @@ sudo: required
 dist: trusty
 script:
   - cat /etc/lsb-release
+  - qemu-io -V
   - ./tests/script/prepare_for_test
   - ./tests/script/exec_all_unit
   - ./tests/script/exec_all_operation

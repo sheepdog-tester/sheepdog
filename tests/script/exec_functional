@@ -13,7 +13,8 @@ set_up() {
 }
 
 exec_functional() {
-  sudo ./tests/functional/check
+  sudo ./tests/functional/check -g
+  sudo ./tests/functional/check 048
 }
 
 tear_down() {

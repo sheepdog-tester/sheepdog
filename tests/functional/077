@@ -4,12 +4,6 @@
 
 . ./common
 
-_need_to_be_root
-
-_make_device 0 $((300 * 1024 ** 2))
-_make_device 1 $((300 * 1024 ** 2))
-_make_device 2 $((300 * 1024 ** 2))
-
 for i in `seq 0 2`; do
     _start_sheep $i
 done

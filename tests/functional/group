@@ -19,10 +19,10 @@
 002 auto quick cluster md
 003 auto quick cluster md
 004 auto quick cluster md
-005 auto quick cluster md
+#005 auto quick cluster md
 006 auto quick cluster md
 007 auto quick cluster md
-008 auto store md
+#008 auto store md
 009 auto quick store md
 010 auto quick store
 011 auto quick store md

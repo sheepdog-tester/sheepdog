@@ -42,7 +42,7 @@
 028 auto quick store md
 029 auto quick vdi md
 #030 auto quick store md
-031 auto quick vdi md
+#031 auto quick vdi md
 032 auto quick store
 033 auto quick store
 034 auto quick store md
@@ -65,7 +65,7 @@
 #053 auto quick cluster md
 054 auto quick cluster md
 #055 auto cluster md
-056 auto quick cluster md
+#056 auto quick cluster md
 057 auto quick cluster md
 058 auto quick cluster md
 #059 auto quick vdi md

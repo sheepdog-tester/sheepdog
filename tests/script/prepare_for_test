@@ -21,6 +21,7 @@ build_qemu() {
   make
   sudo make install
   cd ~
+  qemu-io -V
 }
 
 #main

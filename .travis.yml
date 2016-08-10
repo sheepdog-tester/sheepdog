@@ -3,6 +3,6 @@ sudo: required
 dist: trusty
 script:
   - ./tests/script/prepare_for_test
-  - ./tests/script/exec_all_unit
-  - ./tests/script/exec_all_operation
-  - ./tests/script/exec_all_functional
+  - ./tests/script/exec_unit
+  - ./tests/script/exec_operation
+  - ./tests/script/exec_functional

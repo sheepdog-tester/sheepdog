@@ -65,7 +65,7 @@
 #053 auto quick cluster md
 054 auto quick cluster md
 #055 auto cluster md
-#056 auto quick cluster md
+056 auto quick cluster md
 057 auto quick cluster md
 #058 auto quick cluster md
 #059 auto quick vdi md
@@ -93,7 +93,7 @@
 #083 auto quick vdi
 084 auto quick sheepfs
 085 auto quick vdi md
-086 auto quick vdi md
+#086 auto quick vdi md
 087 auto quick vdi
 #088 auto quick cluster
 089 auto quick sheepfs
